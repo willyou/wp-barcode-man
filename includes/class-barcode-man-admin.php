@@ -55,7 +55,7 @@ class Barcodeman_Admin {
 			self::MENU_SLUG_DASHBOARD,
 			array( 'Barcodeman_Admin', 'route' ),
 			Barcodeman_Base::get_asset_url() . 'images/barcodeman-menu-icon.png',
-			59
+			59.57567657
 		);
 
 	}
