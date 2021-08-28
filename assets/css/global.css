@@ -46,13 +46,25 @@
     margin: 20px 0 30px 0;
 }
 
-/*noinspection CssUnusedSymbol*/
 .barcodeman-connect .barcodeman-connect-button {
-    height: 53px;
-    line-height: 53px;
-    padding: 0 40px;
-    font-size: 18px;
+	background-color: #00BA6E;
+	height: 53px;
+	line-height: 53px;
+	padding: 0 40px;
+	font-size: 18px;
+	border: solid 2px #FFF;
+
 }
+
+.barcodeman-connect .barcodeman-connect-button:hover {
+
+	background-color: #00A360;
+	border: solid 2px #FFF;
+
+}
+
+.support-info-wrap .support-info-block .btn-wrap a:hover {
+background-color: #00A360;
 
 .barcodeman-stats {
     position: relative;
