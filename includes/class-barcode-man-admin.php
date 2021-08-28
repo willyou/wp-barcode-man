@@ -35,7 +35,7 @@ class Barcodeman_Admin {
 	}
 
 	/**
-	 * Loads stylesheet for printful toolbar element
+	 * Loads stylesheet for barcodeman toolbar element
 	 */
 	public function add_global_style() {
 		if ( is_user_logged_in() ) {

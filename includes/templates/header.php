@@ -4,7 +4,7 @@
     $base_url = '?page=barcodeman-dashboard';
     ?>
 
-    <h2 class="nav-tab-wrapper printful-tabs">
+    <h2 class="nav-tab-wrapper barcodeman-tabs">
         <?php foreach ($tabs as $tab) : ?>
             <?php
 	        $active = '';

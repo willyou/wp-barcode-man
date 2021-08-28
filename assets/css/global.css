@@ -1,4 +1,4 @@
-.printful-toolbar .printful-toolbar-issues {
+.barcodeman-toolbar .barcodeman-toolbar-issues {
   background-color: #d54e21;
   display: inline-block;
   padding: 0 5px !important;
@@ -7,9 +7,9 @@
   font-size: 11px !important;
   color: #fff !important;
 }
-.printful-toolbar:hover .printful-toolbar-issues,
-.printful-toolbar:active .printful-toolbar-issues,
-.printful-toolbar.hover .printful-toolbar-issues {
+.barcodeman-toolbar:hover .barcodeman-toolbar-issues,
+.barcodeman-toolbar:active .barcodeman-toolbar-issues,
+.barcodeman-toolbar.hover .barcodeman-toolbar-issues {
   color: #fff !important;
 }
 
