@@ -8,7 +8,7 @@ Version: 1.0.0
 Author: Barcode Man
 Author URI: https://saberwp.com/
 License: GPL2 http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wp-barcode-man
+Text Domain: barcodeman
 WC requires at least: 3.0.0
 WC tested up to: 5.5
 */

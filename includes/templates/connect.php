@@ -2,7 +2,7 @@
 
     <div class="printful-connect-inner">
 
-        <h1><?php esc_html_e('Connect to Printful', 'printful'); ?></h1>
+        <h1><?php esc_html_e('Connect to Barcodeman', 'barcodeman'); ?></h1>
 
         <?php
         if ( ! empty( $issues ) ) {

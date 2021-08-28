@@ -1,9 +1,6 @@
 <?php
 
-
 class Barcodeman_Admin_Dashboard {
-
-	const API_KEY_SEARCH_STRING = 'Printful';
 
 	public static $_instance;
 
@@ -31,22 +28,16 @@ class Barcodeman_Admin_Dashboard {
 	}
 
 	/**
-	 * Display the Printful connect page
+	 * Display the Barcodeman connect page
 	 */
 	public function render_connect() {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
 
-		Barcodeman_Admin::load_template( 'connect', array(
-				'consumer_key'       => $this->_get_consumer_key(),
-				'waiting_sync'       => isset( $_GET['sync-in-progress'] ),
-				'consumer_key_error' => isset( $_GET['consumer-key-error'] ),
-				'issues'             => $issues,
-			)
-		);
+		Barcodeman_Admin::load_template( 'connect', array() );
 
 		Barcodeman_Admin::load_template('footer');
-		
+
 	}
 
 	/**
@@ -54,14 +45,14 @@ class Barcodeman_Admin_Dashboard {
 	 */
 	public function render_connect_error() {
 
-		Printful_Admin::load_template( 'header', array( 'tabs' => Printful_Admin::get_tabs() ) );
+		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
 
 		$connect_error = Printful_Integration::instance()->get_connect_error();
 		if ( $connect_error ) {
-			Printful_Admin::load_template('error', array('error' => $connect_error));
+			Barcodeman_Admin::load_template('error', array('error' => $connect_error));
 		}
 
-		Printful_Admin::load_template('footer');
+		Barcodeman_Admin::load_template('footer');
 	}
 
 	/**
@@ -88,7 +79,7 @@ class Barcodeman_Admin_Dashboard {
 
 		if ( isset( $_GET['sync-in-progress'] ) ) {
 			$emit_auth_response = 'Printful_Connect.send_return_message();';
-			Printful_Admin::load_template( 'inline-script', array( 'script' => $emit_auth_response ) );
+			Barcodeman_Admin::load_template( 'inline-script', array( 'script' => $emit_auth_response ) );
 		}
 
 		Barcodeman_Admin::load_template( 'footer' );
@@ -102,9 +93,9 @@ class Barcodeman_Admin_Dashboard {
 		$stats = self::instance()->_get_stats();
 
 		if ( ! empty( $stats ) && ! is_wp_error( $stats ) ) {
-			Printful_Admin::load_template( 'stats', array( 'stats' => $stats ) );
+			Barcodeman_Admin::load_template( 'stats', array( 'stats' => $stats ) );
 		} else {
-			Printful_Admin::load_template( 'error', array( 'error' => $stats->get_error_message( 'printful' ) ) );
+			Barcodeman_Admin::load_template( 'error', array( 'error' => $stats->get_error_message( 'printful' ) ) );
 		}
 
 		exit;
@@ -118,9 +109,9 @@ class Barcodeman_Admin_Dashboard {
 		$orders = self::instance()->_get_orders();
 
 		if ( ! empty( $orders ) && is_wp_error( $orders ) ) {
-			Printful_Admin::load_template( 'error', array( 'error' => $orders->get_error_message('printful') ) );
+			Barcodeman_Admin::load_template( 'error', array( 'error' => $orders->get_error_message('printful') ) );
 		} else {
-			Printful_Admin::load_template( 'order-table', array( 'orders' => $orders ) );
+			Barcodeman_Admin::load_template( 'order-table', array( 'orders' => $orders ) );
 		}
 
 		exit;
@@ -188,33 +179,6 @@ class Barcodeman_Admin_Dashboard {
 		}
 
 		return $orders;
-	}
-
-	/**
-	 * Get the last used consumer key fragment and use it for validating the address
-	 * @return null|string
-	 */
-	private function _get_consumer_key() {
-
-		global $wpdb;
-
-		// Get the API key
-        $printfulKey = '%' . esc_sql( $wpdb->esc_like( wc_clean( self::API_KEY_SEARCH_STRING ) ) ) . '%';
-        $consumer_key = $wpdb->get_var(
-            $wpdb->prepare(
-                "SELECT truncated_key FROM {$wpdb->prefix}woocommerce_api_keys WHERE description LIKE %s ORDER BY key_id DESC LIMIT 1",
-                $printfulKey
-            )
-        );
-
-		//if not found by description, it was probably manually created. try the last used key instead
-		if ( ! $consumer_key ) {
-			$consumer_key = $wpdb->get_var(
-			    "SELECT truncated_key FROM {$wpdb->prefix}woocommerce_api_keys ORDER BY key_id DESC LIMIT 1"
-            );
-		}
-
-		return $consumer_key;
 	}
 
 }
