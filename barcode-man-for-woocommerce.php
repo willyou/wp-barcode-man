@@ -1,5 +1,5 @@
 <?php
- 
+
 /**
 Plugin Name: Barcode Man for WooCommerce
 Plugin URI: https://wordpress.org/plugins/printful-shipping-for-woocommerce/
@@ -24,30 +24,14 @@ class BarcodeMan_Base {
         add_action( 'plugins_loaded', array( $this, 'init' ) );
     }
 
-    // Initialize the plugin.
-    public function init() {
+		// Initialize the plugin.
+		public function init() {
 
-      
+			require_once 'includes/class-barcode-man-admin.php';
+			require_once 'includes/class-barcode-man-admin-dashboard.php';
 
-	    // WP REST API.
-	    // $this->rest_api_init();
+			Barcodeman_Admin::init();
 
-        //load required classes
-	   
-	    require_once 'includes/class-barcode-man-admin.php';
-	    require_once 'includes/class-barcode-man-admin-dashboard.php';
-	    // require_once 'includes/class-printful-admin-settings.php';
-	    // require_once 'includes/class-printful-admin-status.php';
-	    // require_once 'includes/class-printful-admin-support.php';
-	    // // require_once 'includes/class-printful-size-chart-tab.php';
-	    // // require_once 'includes/class-printful-size-chart-tab.php';
-        // require_once 'includes/class-printful-template.php';
-        // // require_once 'includes/class-printful-customizer.php';
-        // // require_once 'includes/class-printful-size-guide.php';
-
-	    //launch init
-	    Barcodeman_Admin::init();
-	    
 	    //hook ajax callbacks
 	    // add_action( 'wp_ajax_save_printful_settings', array( 'Printful_Admin_Settings', 'save_printful_settings' ) );
 	    // add_action( 'wp_ajax_ajax_force_check_connect_status', array( 'Printful_Integration', 'ajax_force_check_connect_status' ) );
@@ -58,7 +42,7 @@ class BarcodeMan_Base {
 	    // add_action( 'wp_ajax_get_printful_carriers', array( 'Printful_Admin_Settings', 'render_carriers_ajax' ) );
     }
 
-    
+
 
 	/**
 	 * @return string
@@ -109,4 +93,4 @@ class BarcodeMan_Base {
     }
 }
 
-new BarcodeMan_Base();    
+new BarcodeMan_Base();

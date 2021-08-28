@@ -1,5 +1,5 @@
 <?php
- 
+
 
 class Barcodeman_Admin_Dashboard {
 
@@ -7,7 +7,7 @@ class Barcodeman_Admin_Dashboard {
 
 	public static $_instance;
 
- 
+
 	public static function instance() {
 
 		if ( is_null( self::$_instance ) ) {
@@ -17,16 +17,16 @@ class Barcodeman_Admin_Dashboard {
 		return self::$_instance;
 	}
 
-	 
+
 	function __construct() {
 
 	}
 
- 
+
 	public static function view() {
 
 		$dashboard = self::instance();
-		 
+
 		$dashboard->render_connect();
 	}
 
@@ -34,16 +34,6 @@ class Barcodeman_Admin_Dashboard {
 	 * Display the Printful connect page
 	 */
 	public function render_connect() {
-
-		$status = Printful_Admin_Status::instance();
-		$issues = array();
-
-		$permalinks_set = $status->run_single_test( 'check_permalinks' );
- 
-
-		if ( strpos( get_site_url(), 'localhost' ) ) {
-			$issues[] = 'You can\'t connect to Printful from localhost. Printful needs to be able reach your site to establish a connection.';
-		}
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
 
@@ -55,12 +45,8 @@ class Barcodeman_Admin_Dashboard {
 			)
 		);
 
-		if ( isset( $_GET['sync-in-progress'] ) ) {
-			$emit_auth_response = 'Printful_Connect.send_return_message();';
-			Barcodeman_Admin::load_template( 'inline-script', array( 'script' => $emit_auth_response ) );
-		}
-
 		Barcodeman_Admin::load_template('footer');
+		
 	}
 
 	/**
@@ -96,7 +82,7 @@ class Barcodeman_Admin_Dashboard {
 			$error = $orders;
 		}
 
-		 
+
 
 		Barcodeman_Admin::load_template( 'quick-links' );
 

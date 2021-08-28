@@ -43,7 +43,7 @@
 	                    $<?php echo esc_html( $order['costs']['total'] ); ?>
                     </td>
                     <td>
-                        <a href="<?php echo esc_url(Printful_Base::get_printful_host()); ?>dashboard?order_id=<?php echo esc_attr($order['id']); ?>" target="_blank"><?php esc_html_e('Open in Printful', 'printful'); ?></a>
+                        <a href=">Open in BarCodeMan</a>
                     </td>
                 </tr>
 

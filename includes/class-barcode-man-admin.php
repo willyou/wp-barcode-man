@@ -1,5 +1,5 @@
 <?php
- 
+
 
 class Barcodeman_Admin {
 
@@ -29,18 +29,9 @@ class Barcodeman_Admin {
      * Loads stylesheets used in printful admin pages
      * @param $hook
      */
-    public function add_admin_styles($hook) {
-
-	    wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ) );
-
-	    // if ( strpos( $hook, 'printful-dashboard' ) !== false ) {
-		//     wp_enqueue_style( 'wp-color-picker' );
-		//     wp_enqueue_style( 'printful-dashboard', plugins_url( '../assets/css/dashboard.css', __FILE__ ) );
-		//     wp_enqueue_style( 'printful-status', plugins_url( '../assets/css/status.css', __FILE__ ) );
-		//     wp_enqueue_style( 'printful-support', plugins_url( '../assets/css/support.css', __FILE__ ) );
-		//     wp_enqueue_style( 'printful-settings', plugins_url( '../assets/css/settings.css', __FILE__ ) );
-	    // }
-    }
+		public function add_admin_styles($hook) {
+			wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ) );
+		}
 
 	/**
 	 * Loads stylesheet for printful toolbar element
@@ -79,9 +70,9 @@ class Barcodeman_Admin {
 			Barcodeman_Base::get_asset_url() . 'images/barcodeman-menu-icon.png',
 			59
 		);
-	 
 
-		
+
+
 	}
 
 	/**
@@ -109,7 +100,7 @@ class Barcodeman_Admin {
 		);
 
 		array_unshift( $tabs, array( 'name' => __( 'Setup', 'barcodeman' ), 'tab_url' => false ) );
-		
+
 		return $tabs;
 	}
 

@@ -4,8 +4,6 @@
 
         <h1><?php esc_html_e('Connect to Printful', 'printful'); ?></h1>
 
-        <img src=" <?php echo esc_url(Printful_Base::get_asset_url() . 'images/connect.svg'); ?>" class="connect-image" alt="connect to printful">
-
         <?php
         if ( ! empty( $issues ) ) {
             ?>
@@ -23,7 +21,6 @@
             $url = '#';
         } else {
             ?><p class="connect-description"><?php esc_html_e('You\'re almost done! Just 2 more steps to have your WooCommerce store connected to Printful for automatic order fulfillment.', 'printful'); ?></p><?php
-            $url = Printful_Base::get_printful_host() . 'dashboard/woocommerce/plugin-connect?website=' . urlencode( trailingslashit( get_home_url() ) ) . '&key=' . urlencode( $consumer_key ) . '&returnUrl=' . urlencode( get_admin_url( null,'admin.php?page=' . Printful_Admin::MENU_SLUG_DASHBOARD ) );
         }
 
         echo '<a href="' . esc_url($url) . '" class="button button-primary printful-connect-button ' . ( ! empty( $issues ) ? 'disabled' : '' ) . '" target="_blank">' . esc_html__('Connect', 'printful') . '</a>';
