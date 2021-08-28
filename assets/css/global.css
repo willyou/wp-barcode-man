@@ -64,155 +64,69 @@
 }
 
 .support-info-wrap .support-info-block .btn-wrap a:hover {
-background-color: #00A360;
 
-.barcodeman-stats {
-    position: relative;
-    margin: 20px 0 50px 0;
-    background-color: #fff;
-    padding: 30px 20px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    border-left: #0073aa 4px solid;
-}
-.barcodeman-stats .barcodeman-stats-item {
-    width: 49%;
-    display: inline-block;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    vertical-align: top;
-    padding: 0 8px;
-}
+	background-color: #00A360;
 
-.barcodeman-stats .barcodeman-stats-item h4 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    line-height: 26px;
-}
-.barcodeman-stats .barcodeman-stats-item h4 .dashicons {
-    font-size: 26px;
-    width: 26px;
-    height: 26px;
-}
-
-/*noinspection ALL*/
-.barcodeman-stats .barcodeman-stats-item h4 .dashicons-arrow-up-alt {
-    color: green;
-}
-.barcodeman-stats .barcodeman-stats-item h4 .dashicons-arrow-down-alt {
-    color: #d54e21;
 }
 
 .wrap h2.nav-tab-wrapper.barcodeman-tabs {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
-
 
 .barcodeman-quick-links {
-    position: relative;
-    margin-bottom: 30px;
+	position: relative;
+	margin-bottom: 30px;
 }
+
 .barcodeman-quick-links .barcodeman-quick-links-item {
-    width: 120px;
-    background: #fff;
-    border: solid 1px #e1e1e1;
-    float: left;
-    padding: 20px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-    text-decoration: none;
-}
-.barcodeman-quick-links .barcodeman-quick-links-item .dashicons {
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: #444;
-}
-.barcodeman-quick-links .barcodeman-quick-links-item h4 {
-    text-decoration: none;
-    color: #444;
-    margin: 5px 0 0 0;
-}
-.barcodeman-quick-links .barcodeman-quick-links-item:hover {
-    cursor: pointer;
-}
-.barcodeman-quick-links .barcodeman-quick-links-item:hover .dashicons,
-.barcodeman-quick-links .barcodeman-quick-links-item:hover h4 {
-    color: #0D72B2;
-}
-
-.barcodeman-error {
-    margin-top: 20px;
-}
-
-.barcodeman-notice {
-    background: #fff;
-    border-left: 4px solid #dc3232;
-    padding: 1px 12px;
-    margin: 10px 0 20px 0;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    text-align: left;
-}
-.barcodeman-notice li {
-    font-weight: bold;
-    margin-left: 20px;
-    list-style: disc;
-}
-
-.block-loader {
-    text-align: center;
-    padding: 20px 0;
-    line-height: 20px;
-}
-.block-loader .message {
-    padding-left: 10px;
-    line-height: 20px;
-    display: inline-block;
-    font-size: 16px;
-}
-.block-loader .loader {
-    vertical-align: top;
+	width: 120px;
+	background: #fff;
+	border: solid 1px #e1e1e1;
+	float: left;
+	padding: 20px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	text-decoration: none;
 }
 
 #wpfooter::after {
-    box-sizing: border-box;
-    content: "";
-    width: 64px;
-    left: 50%;
-    margin-left: -32px;
-    height: 28px;
-    position: absolute;
-    bottom: 0;
-    background: url("../images/barcodeman-logo-footer.png") no-repeat bottom center;
-    background-size: 64px;
+	box-sizing: border-box;
+	content: "";
+	width: 30px;
+	left: 50%;
+	margin-left: -32px;
+	height: 30px;
+	position: absolute;
+	bottom: 5px;
+	background: url("../images/barcodeman-logo-footer.png") no-repeat bottom center;
+	background-size: 30px;
 }
 
 
 .support-report-wrap {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    border-left: #0073aa 4px solid;
+	background-color: #fff;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	border-left: #0073aa 4px solid;
 }
 
 .support-report-wrap p {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .support-report-wrap .support-report {
-    width: 100%;
-    height: 100px;
-    font-family: monospace;
-    margin-bottom: 10px;
-    background: #efefef;
+	width: 100%;
+	height: 100px;
+	font-family: monospace;
+	margin-bottom: 10px;
+	background: #efefef;
 }
 
 .support-info-wrap {
-    margin-top: 40px;
-    box-sizing: border-box;
-
+	margin-top: 40px;
+	box-sizing: border-box;
 }
 
 .support-info-wrap .support-info-block {
