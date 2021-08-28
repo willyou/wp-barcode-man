@@ -65,16 +65,10 @@ class Barcodeman_Admin {
 	 */
 	public static function route() {
 
-		$tabs = array(
-			'dashboard' => 'Barcodeman_Admin_Dashboard',
-			'setup'     => 'Barcodeman_Admin_Dashboard',
-			'support'   => 'Barcodeman_Admin_Dashboard',
-		);
-
 		$tab = ( ! empty( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard' );
-		if ( ! empty( $tabs[ $tab ] ) ) {
-			call_user_func( array( $tabs[ $tab ], 'view' ) );
-		}
+
+		call_user_func( [ 'Barcodeman_Admin_Dashboard', 'render_' . $tab ] );
+
 	}
 
 	// Get the tabs

@@ -28,31 +28,16 @@ class Barcodeman_Admin_Dashboard {
 	}
 
 	/**
-	 * Display the Barcodeman connect page
+	 * Display the Barcodeman support page
 	 */
-	public function render_connect() {
+	public function render_support() {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
 
-		Barcodeman_Admin::load_template( 'connect', array() );
+		Barcodeman_Admin::load_template( 'support', array() );
 
 		Barcodeman_Admin::load_template('footer');
 
-	}
-
-	/**
-	 * Display the Printful connect error page
-	 */
-	public function render_connect_error() {
-
-		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
-
-		$connect_error = Printful_Integration::instance()->get_connect_error();
-		if ( $connect_error ) {
-			Barcodeman_Admin::load_template('error', array('error' => $connect_error));
-		}
-
-		Barcodeman_Admin::load_template('footer');
 	}
 
 	/**
@@ -61,28 +46,9 @@ class Barcodeman_Admin_Dashboard {
 	public function render_dashboard() {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
-
-		$stats = $this->_get_stats(true);
-		$orders = $this->_get_orders(true);
-		$error = false;
-
-		if ( is_wp_error( $stats ) ) {
-			$error = $stats;
-		}
-		if ( is_wp_error( $orders ) ) {
-			$error = $orders;
-		}
-
-
-
-		Barcodeman_Admin::load_template( 'quick-links' );
-
-		if ( isset( $_GET['sync-in-progress'] ) ) {
-			$emit_auth_response = 'Printful_Connect.send_return_message();';
-			Barcodeman_Admin::load_template( 'inline-script', array( 'script' => $emit_auth_response ) );
-		}
-
+		Barcodeman_Admin::load_template( 'connect', array() );
 		Barcodeman_Admin::load_template( 'footer' );
+
 	}
 
 	/**
