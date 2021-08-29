@@ -13,6 +13,13 @@ WC requires at least: 3.0.0
 WC tested up to: 5.5
 */
 
+define( 'BARCODEMAN_PLUGIN_NAME', 'Barcode Man' );
+define( 'BARCODEMAN_VERSION', '1.4.1' );
+define( 'BARCODEMAN_PATH', plugin_dir_path(__FILE__) );
+define( 'BARCODEMAN_URL', plugin_dir_url(__FILE__) );
+define( 'BARCODEMAN_DEV_MODE', 0 );
+define( 'BARCODEMAN_TEXT_DOMAIN', 'barcodeman' );
+
 class BarcodeMan_Base {
 
 	const VERSION = '1.0.0';

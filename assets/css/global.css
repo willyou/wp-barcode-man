@@ -31,7 +31,7 @@
 
 .barcodeman-connect-inner {
     max-width: 600px;
-    margin: 100px auto 0 auto;
+    margin: 20px auto 20px auto;
     text-align: center;
     position: relative;
 }
@@ -154,6 +154,12 @@
 
 .support-info-wrap .support-info-block .btn-wrap a:hover {
 	background-color: #00A360;
+}
+
+.barcodeman-connect {
+
+	margin-bottom: 80px;
+
 }
 
 @media (min-width: 768px) {
