@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Barcode Man for WooCommerce
-Plugin URI: https://saberwp.com/plugins/barcode-man-wc/
+Plugin URI: https://wordpress.org/plugins/barcode-man/
 Description: Connect to the Bar Code Man service for WooCommerce.
 Version: 1.0.1
 Author: Barcode Man

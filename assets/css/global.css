@@ -14,163 +14,153 @@
 }
 
 #adminmenu .toplevel_page_barcodeman-dashboard img {
-	padding-top: 6px;
+  padding-top: 6px;
   width: 24px;
-	height: 24px;
+  height: 24px;
 }
 
 #adminmenu .toplevel_page_barcodeman-dashboard.current img {
-	opacity: 1.0;
+  opacity: 1;
 }
 
-
 .barcodeman-connect {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 .barcodeman-connect-inner {
-    max-width: 600px;
-    margin: 20px auto 20px auto;
-    text-align: center;
-    position: relative;
+  max-width: 600px;
+  margin: 20px auto 20px auto;
+  text-align: center;
+  position: relative;
 }
 .barcodeman-connect .connect-image {
-    max-width: 100%;
+  max-width: 100%;
 }
 .barcodeman-connect h1 {
-    margin-bottom: 30px;
-    font-size: 34px;
+  margin-bottom: 30px;
+  font-size: 34px;
 }
 .barcodeman-connect .connect-description {
-    margin: 20px 0 30px 0;
+  margin: 20px 0 30px 0;
 }
 
 .barcodeman-connect .barcodeman-connect-button {
-	background-color: #00BA6E;
-	height: 53px;
-	line-height: 53px;
-	padding: 0 40px;
-	font-size: 18px;
-	border: solid 2px #FFF;
-
+  background-color: #00ba6e;
+  height: 53px;
+  line-height: 53px;
+  padding: 0 40px;
+  font-size: 18px;
+  border: solid 2px #fff;
 }
 
 .barcodeman-connect .barcodeman-connect-button:hover {
-
-	background-color: #00A360;
-	border: solid 2px #FFF;
-
+  background-color: #00a360;
+  border: solid 2px #fff;
 }
 
 .support-info-wrap .support-info-block .btn-wrap a:hover {
-
-	background-color: #00A360;
-
+  background-color: #00a360;
 }
 
 .wrap h2.nav-tab-wrapper.barcodeman-tabs {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .barcodeman-quick-links {
-	position: relative;
-	margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .barcodeman-quick-links .barcodeman-quick-links-item {
-	width: 120px;
-	background: #fff;
-	border: solid 1px #e1e1e1;
-	float: left;
-	padding: 20px;
-	margin-right: 25px;
-	margin-bottom: 25px;
-	text-align: center;
-	text-decoration: none;
+  width: 120px;
+  background: #fff;
+  border: solid 1px #e1e1e1;
+  float: left;
+  padding: 20px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-decoration: none;
 }
 
 #wpfooter::after {
-	box-sizing: border-box;
-	content: "";
-	width: 30px;
-	left: 50%;
-	margin-left: -32px;
-	height: 30px;
-	position: absolute;
-	bottom: 5px;
-	background: url("../images/barcodeman-logo-footer.png") no-repeat bottom center;
-	background-size: 30px;
+  box-sizing: border-box;
+  content: "";
+  width: 30px;
+  left: 50%;
+  margin-left: -32px;
+  height: 30px;
+  position: absolute;
+  bottom: 5px;
+  background: url("../images/barcodeman-logo-footer.png") no-repeat bottom
+    center;
+  background-size: 30px;
 }
 
-
 .support-report-wrap {
-	background-color: #fff;
-	padding: 20px;
-	margin: 20px 0;
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-	border-left: #0073aa 4px solid;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-left: #0073aa 4px solid;
 }
 
 .support-report-wrap p {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .support-report-wrap .support-report {
-	width: 100%;
-	height: 100px;
-	font-family: monospace;
-	margin-bottom: 10px;
-	background: #efefef;
+  width: 100%;
+  height: 100px;
+  font-family: monospace;
+  margin-bottom: 10px;
+  background: #efefef;
 }
 
 .support-info-wrap {
-	margin-top: 40px;
-	box-sizing: border-box;
+  margin-top: 40px;
+  box-sizing: border-box;
 }
 
 .support-info-wrap .support-info-block {
-    box-sizing: border-box;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .support-info-wrap .support-info-block h3 {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .support-info-wrap .support-info-block .btn-wrap {
-	margin-top: 20px;
-	text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .support-info-wrap .support-info-block .btn-wrap a {
-	background-color: #00BA6E;
-	border: solid 2px #F8F8F8;
+  background-color: #00ba6e;
+  border: solid 2px #f8f8f8;
 }
 
 .support-info-wrap .support-info-block .btn-wrap a:hover {
-	background-color: #00A360;
+  background-color: #00a360;
 }
 
 .barcodeman-connect {
-
-	margin-bottom: 80px;
-
+  margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
+  .support-info-wrap {
+    justify-content: space-between;
+    display: flex;
+  }
 
-	.support-info-wrap {
-		justify-content: space-between;
-		display: flex;
-	}
-
-	.support-info-wrap .support-info-block {
-		width: 32%;
-	}
-
+  .support-info-wrap .support-info-block {
+    width: 48%;
+  }
 }
