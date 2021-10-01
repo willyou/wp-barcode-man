@@ -65,7 +65,7 @@ class Barcodeman_Admin {
 	 */
 	public static function route() {
 
-		$tab = ( ! empty( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard' );
+		$tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard' );
 
 		call_user_func( [ 'Barcodeman_Admin_Dashboard', 'render_' . $tab ] );
 
