@@ -4,7 +4,7 @@ Tags: barcode, label print, dymo, address label, product label, retail
 Requires at least: 5.3
 Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,3 +53,6 @@ Pleasse go to [Help Center](https://intercom.help/barcodeman/en/articles/5590699
 
 = 1.0.0 =
 * First release
+
+= 1.0.1 =
+* Fix issues for PHP 7+
