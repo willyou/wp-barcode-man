@@ -4,7 +4,7 @@
 Plugin Name: Barcode Man for WooCommerce
 Plugin URI: https://wordpress.org/plugins/barcode-man/
 Description: Connect to the Bar Code Man service for WooCommerce.
-Version: 1.0.1
+Version: 1.0.0
 Author: Barcode Man
 Author URI: https://itsgookit.com/
 License: GPL2 http://www.gnu.org/licenses/gpl-2.0.html
