@@ -38,6 +38,8 @@ class BarcodeMan_Base {
 	}
 
 	/**
+	 * Get the full URL to the assets directory.
+	 *
 	 * @return string
 	 */
 	public static function get_asset_url() {
