@@ -15,7 +15,7 @@ class Barcodeman_Admin_Dashboard {
 	}
 
 
-	function __construct() {}
+	public function __construct() {}
 
 	/**
 	 * Display the Barcodeman support page
