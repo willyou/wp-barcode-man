@@ -1,12 +1,14 @@
 <?php
 
+namespace Barcodeman;
+
 class Barcodeman_Admin {
 
-	const MENU_TITLE_TOP       = 'BarcodeMan';
-	const PAGE_TITLE_DASHBOARD = 'Dashboard';
-	const MENU_TITLE_DASHBOARD = 'Dashboard';
-	const MENU_SLUG_DASHBOARD  = 'barcodeman-dashboard';
-	const CAPABILITY           = 'manage_options';
+const MENU_TITLE_TOP       = 'BarcodeMan';
+const PAGE_TITLE_DASHBOARD = 'Dashboard';
+const MENU_TITLE_DASHBOARD = 'Dashboard';
+const MENU_SLUG_DASHBOARD  = 'barcodeman-dashboard';
+const CAPABILITY           = 'manage_options';
 
 	public static function init() {
 
