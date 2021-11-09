@@ -1,5 +1,15 @@
 <?php
+/**
+ * Admin class for BarcodeMan.
+ *
+ * @package Barcodeman
+ */
 
+namespace Barcodeman;
+
+/**
+ * Admin class for BarcodeMan.
+ */
 class Barcodeman_Admin {
 
 	const MENU_TITLE_TOP       = 'BarcodeMan';
@@ -8,11 +18,12 @@ class Barcodeman_Admin {
 	const MENU_SLUG_DASHBOARD  = 'barcodeman-dashboard';
 	const CAPABILITY           = 'manage_options';
 
+	/**
+	 * Class init.
+	 */
 	public static function init() {
-
-		$admin = new self;
+		$admin = new self();
 		$admin->register_admin();
-
 	}
 
 	/**
@@ -27,11 +38,12 @@ class Barcodeman_Admin {
 	}
 
 	/**
-	* Loads stylesheets used in barcodeman admin pages.
-	* @param $hook
-	*/
-	public function add_admin_styles($hook) {
-		wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ) );
+	 * Loads stylesheets used in barcodeman admin pages.
+	 *
+	 * @param Hook $hook Hook to target.
+	 */
+	public function add_admin_styles( $hook ) {
+		wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ), array(), '1.0.0' );
 	}
 
 	/**
@@ -39,7 +51,7 @@ class Barcodeman_Admin {
 	 */
 	public function add_global_style() {
 		if ( is_user_logged_in() ) {
-			wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ) );
+			wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ), array(), '1.0.0' );
 		}
 	}
 
@@ -68,23 +80,43 @@ class Barcodeman_Admin {
 		$tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard' );
 		$contactController = new Barcodeman_Admin_Dashboard();
 
-		call_user_func( [ $contactController, 'render_' . $tab ] );
+
+		
+		call_user_func( array( 'Barcodeman_Admin_Dashboard', 'render_' . $tab ) );
+
+		
 
 	}
 
-	// Get the tabs
+	/**
+	 * Get the tabs
+	 */
 	public static function get_tabs() {
 
 		$tabs = array(
-			array( 'name' => __( 'Support', 'barcodeman' ), 'tab_url' => 'support' ),
+			array(
+				'name'    => __( 'Support', 'barcodeman' ),
+				'tab_url' => 'support',
+			),
 		);
 
-		array_unshift( $tabs, array( 'name' => __( 'Setup', 'barcodeman' ), 'tab_url' => false ) );
+		array_unshift(
+			$tabs,
+			array(
+				'name'    => __( 'Setup', 'barcodeman' ),
+				'tab_url' => false,
+			)
+		);
 
 		return $tabs;
 	}
 
-	// Load template file
+	/**
+	 * Load template file
+	 *
+	 * @param Name      $name template name.
+	 * @param Variables $variables variables passed to template.
+	 */
 	public static function load_template( $name, $variables = array() ) {
 
 		if ( ! empty( $variables ) ) {
@@ -93,7 +125,7 @@ class Barcodeman_Admin {
 
 		$filename = plugin_dir_path( __FILE__ ) . 'templates/' . $name . '.php';
 		if ( file_exists( $filename ) ) {
-			include( $filename );
+			include $filename;
 		}
 	}
 
