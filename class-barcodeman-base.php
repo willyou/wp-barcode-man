@@ -38,7 +38,7 @@ class BarcodeMan_Base {
 	 */
 	public function init() {
 
-		require_once 'includes/class-barcode-man-admin.php';
+		require_once 'includes/class-barcodeman-admin.php';
 		require_once 'includes/class-barcode-man-admin-dashboard.php';
 
 		Barcodeman_Admin::init();

@@ -2,19 +2,23 @@
 
 namespace Barcodeman;
 
+/**
+ * Admin class for BarcodeMan.
+ */
 class Barcodeman_Admin {
 
-const MENU_TITLE_TOP       = 'BarcodeMan';
-const PAGE_TITLE_DASHBOARD = 'Dashboard';
-const MENU_TITLE_DASHBOARD = 'Dashboard';
-const MENU_SLUG_DASHBOARD  = 'barcodeman-dashboard';
-const CAPABILITY           = 'manage_options';
+	const MENU_TITLE_TOP       = 'BarcodeMan';
+	const PAGE_TITLE_DASHBOARD = 'Dashboard';
+	const MENU_TITLE_DASHBOARD = 'Dashboard';
+	const MENU_SLUG_DASHBOARD  = 'barcodeman-dashboard';
+	const CAPABILITY           = 'manage_options';
 
+	/**
+	 * Class init.
+	 */
 	public static function init() {
-
-		$admin = new self;
+		$admin = new self();
 		$admin->register_admin();
-
 	}
 
 	/**
@@ -28,13 +32,14 @@ const CAPABILITY           = 'manage_options';
 
 	}
 
-	/**
-	* Loads stylesheets used in barcodeman admin pages.
-	* @param $hook
-	*/
-	public function add_admin_styles($hook) {
-		wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ) );
-	}
+		/**
+		 * Loads stylesheets used in barcodeman admin pages.
+		 *
+		 * @param Hook $hook Hook to target.
+		 */
+		public function add_admin_styles( $hook ) {
+			wp_enqueue_style( 'barcodeman-global', plugins_url( '../assets/css/global.css', __FILE__ ), array(), '1.0.0' );
+		}
 
 	/**
 	 * Loads stylesheet for barcodeman toolbar element
