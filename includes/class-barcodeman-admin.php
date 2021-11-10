@@ -76,16 +76,11 @@ class Barcodeman_Admin {
 	 * Route the tabs
 	 */
 	public static function route() {
-
-		$tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard' );
-		$contactController = new Barcodeman_Admin_Dashboard();
-
-
-		
+		if ( isset( $_GET['tab'] ) ) {
+			$tab_name = sanitize_text_field( wp_unslash( $_GET['tab'] ) );
+		}
+		$tab = ( isset( $tab_name ) ? $tab_name : 'dashboard' );
 		call_user_func( array( 'Barcodeman_Admin_Dashboard', 'render_' . $tab ) );
-
-		
-
 	}
 
 	/**
