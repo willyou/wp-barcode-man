@@ -1,20 +1,37 @@
 <?php
+/**
+ * Admin dashboard class.
+ *
+ * @package Barcodeman
+ */
 
+/**
+ * Barcodeman_Admin_Dashboard class.
+ */
 class Barcodeman_Admin_Dashboard {
 
-	public static $_instance;
+	/**
+	 * Instance variable.
+	 *
+	 * @var Instance $instance instance of the singleton object.
+	 */
+	public static $instance;
 
-
+	/**
+	 * Instance
+	 */
 	public static function instance() {
 
-		if ( is_null( self::$_instance ) ) {
-			self::$_instance = new self();
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
 		}
 
-		return self::$_instance;
+		return self::$instance;
 	}
 
-
+	/**
+	 * Constructor
+	 */
 	public function __construct() {}
 
 	/**
@@ -24,7 +41,7 @@ class Barcodeman_Admin_Dashboard {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
 		Barcodeman_Admin::load_template( 'support', array() );
-		Barcodeman_Admin::load_template('footer');
+		Barcodeman_Admin::load_template( 'footer' );
 
 	}
 
