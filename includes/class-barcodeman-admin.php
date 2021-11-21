@@ -65,7 +65,7 @@ class Barcodeman_Admin {
 			self::MENU_TITLE_TOP,
 			self::CAPABILITY,
 			self::MENU_SLUG_DASHBOARD,
-			array( 'Barcodeman_Admin', 'route' ),
+			array( '\BarcodeMan\Barcodeman_Admin', 'route' ),
 			Barcodeman_Base::get_asset_url() . 'images/barcodeman-menu-icon.png',
 			59.57567657
 		);
@@ -80,7 +80,7 @@ class Barcodeman_Admin {
 			$tab_name = sanitize_text_field( wp_unslash( $_GET['tab'] ) );
 		}
 		$tab = ( isset( $tab_name ) ? $tab_name : 'dashboard' );
-		call_user_func( array( 'Barcodeman_Admin_Dashboard', 'render_' . $tab ) );
+		call_user_func( array( 'BarcodeMan\Barcodeman_Admin_Dashboard', 'render_' . $tab ) );
 	}
 
 	/**

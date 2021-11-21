@@ -5,6 +5,8 @@
  * @package Barcodeman
  */
 
+namespace BarcodeMan;
+
 /**
  * Barcodeman_Admin_Dashboard class.
  */

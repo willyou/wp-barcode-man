@@ -14,7 +14,7 @@
 ?>
 
 <h2 class="nav-tab-wrapper barcodeman-tabs">
-	<?php foreach ( $tabs as $tab_item_item ) : ?>
+	<?php foreach ( $tabs as $tab_item ) : ?>
 		<?php
 
 		$active = '';
