@@ -5,7 +5,7 @@
  * @package Barcodeman
  */
 
-namespace Barcodeman;
+namespace BarcodeMan;
 
 /**
  * Admin class for BarcodeMan.

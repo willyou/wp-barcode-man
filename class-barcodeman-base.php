@@ -3,7 +3,7 @@
  * Plugin Name: Barcode Man for WooCommerce
  * Plugin URI: https://wordpress.org/plugins/barcode-man/
  * Description: Connect to the Bar Code Man service for WooCommerce.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Barcode Man
  * Author URI: https://saberwp.com/
  * License: GPL2 http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,8 +14,10 @@
  * @package BarcodeMan
  */
 
+namespace BarcodeMan;
+
 define( 'BARCODEMAN_PLUGIN_NAME', 'Barcode Man' );
-define( 'BARCODEMAN_VERSION', '1.0.1' );
+define( 'BARCODEMAN_VERSION', '1.0.2' );
 define( 'BARCODEMAN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BARCODEMAN_URL', plugin_dir_url( __FILE__ ) );
 define( 'BARCODEMAN_DEV_MODE', 0 );
@@ -38,8 +40,8 @@ class BarcodeMan_Base {
 	 */
 	public function init() {
 
-		require_once 'includes/class-barcodeman-admin.php';
-		require_once 'includes/class-barcode-man-admin-dashboard.php';
+		require_once BARCODEMAN_PATH . 'includes/class-barcodeman-admin.php';
+		require_once BARCODEMAN_PATH . 'includes/class-barcodeman-admin-dashboard.php';
 
 		Barcodeman_Admin::init();
 

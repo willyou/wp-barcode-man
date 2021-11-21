@@ -12,17 +12,17 @@ Print Customized Barcode Labels Effortlessly
 
 == Description ==
 
-We decided to create Barcode Man because we could not find a barcode printing solution that was both customizable and easy to use. 
+We decided to create Barcode Man because we could not find a barcode printing solution that was both customizable and easy to use.
 
-This inspired us to create Barcode Man --  an effective way to create barcodes and labels for your products. 
+This inspired us to create Barcode Man --  an effective way to create barcodes and labels for your products.
 
 A solution that caters to your wider needs and preferences.
 
 = How does Barcode Man work? =
 
-Barcode Man allows you to create highly customizable labels in various formats. 
+Barcode Man allows you to create highly customizable labels in various formats.
 
-Above all, we provide you with a solution that will enable you to create labels easily. 
+Above all, we provide you with a solution that will enable you to create labels easily.
 
 Some of the advantages of using Barcode Man include:
 
@@ -51,8 +51,11 @@ Pleasse go to [Help Center](https://intercom.help/barcodeman/en/articles/5590699
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-* First release
+= 1.0.2 =
+* Namespacing added and linter errors fixed.
 
 = 1.0.1 =
 * Fix issues for PHP 7+
+
+= 1.0.0 =
+* First release
