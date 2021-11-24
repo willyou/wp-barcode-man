@@ -4,7 +4,7 @@ Tags: barcode, label print, dymo, address label, product label, retail
 Requires at least: 5.3
 Tested up to: 5.8.1
 Requires PHP: 7.0
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ Some of the advantages of using Barcode Man include:
 
 = How do I integrate with WooCommerce? =
 
-Pleasse go to [Help Center](https://intercom.help/barcodeman/en/articles/5590699-how-to-integrate-with-woo-commerce) to get more details.
+Please go to [Help Center](https://intercom.help/barcodeman/en/articles/5590699-how-to-integrate-with-woo-commerce) to get more details.
 
 == Screenshots ==
 
@@ -50,6 +50,9 @@ Pleasse go to [Help Center](https://intercom.help/barcodeman/en/articles/5590699
 3. Print Product Label & Address Label
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+* PHPCS fixes and changelog added.
 
 = 1.0.2 =
 * Namespacing added and linter errors fixed.

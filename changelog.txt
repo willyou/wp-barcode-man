@@ -1,0 +1,11 @@
+= 1.0.3 =
+* PHPCS fixes and changelog added.
+
+= 1.0.2 =
+* Namespacing added and linter errors fixed.
+
+= 1.0.1 =
+* Fix issues for PHP 7+
+
+= 1.0.0 =
+* First release

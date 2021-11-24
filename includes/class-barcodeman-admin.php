@@ -76,10 +76,11 @@ class Barcodeman_Admin {
 	 * Route the tabs
 	 */
 	public static function route() {
-		if ( isset( $_GET['tab'] ) ) {
-			$tab_name = sanitize_text_field( wp_unslash( $_GET['tab'] ) );
+		if ( isset( $_GET['nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['nonce'] ) ), 'view_tab' ) ) {
+			$tab_value = ( isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : '' );
 		}
-		$tab = ( isset( $tab_name ) ? $tab_name : 'dashboard' );
+
+		$tab = ( isset( $tab_value ) ? $tab_value : 'dashboard' );
 		call_user_func( array( 'BarcodeMan\Barcodeman_Admin_Dashboard', 'render_' . $tab ) );
 	}
 
