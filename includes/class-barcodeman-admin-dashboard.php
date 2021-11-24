@@ -42,7 +42,7 @@ class Barcodeman_Admin_Dashboard {
 	public function render_support() {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
-		Barcodeman_Admin::load_template( 'support', array() );
+		Barcodeman_Admin::load_template( 'support' );
 		Barcodeman_Admin::load_template( 'footer' );
 
 	}
@@ -53,7 +53,7 @@ class Barcodeman_Admin_Dashboard {
 	public function render_dashboard() {
 
 		Barcodeman_Admin::load_template( 'header', array( 'tabs' => Barcodeman_Admin::get_tabs() ) );
-		Barcodeman_Admin::load_template( 'connect', array() );
+		Barcodeman_Admin::load_template( 'connect' );
 		Barcodeman_Admin::load_template( 'footer' );
 
 	}

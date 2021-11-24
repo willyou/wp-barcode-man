@@ -115,8 +115,8 @@ class Barcodeman_Admin {
 	 */
 	public static function load_template( $name, $variables = array() ) {
 
-		if ( ! empty( $variables ) ) {
-			extract( $variables );
+		if ( ! empty( $variables ) && isset( $variables['tabs'] ) ) {
+			$tabs = $variables['tabs'];
 		}
 
 		$filename = plugin_dir_path( __FILE__ ) . 'templates/' . $name . '.php';
